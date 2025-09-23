@@ -35,6 +35,7 @@
 				<span class="bc-product-option__label--title">
 					<?php echo esc_html( $checkbox_label ); ?>
 				</span>
+			
 			</span>
 		</label>
 	</div>
