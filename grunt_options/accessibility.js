@@ -1,19 +1,19 @@
 module.exports = {
-	options: {
+	defaults: {
 		accessibilityLevel: 'WCAG2AA',
-		browser: true,
-		force: true,
+		enableBrowser: true,
+		enforce: true,
 		maxBuffer: '1024*1024',
-		reportLocation: 'reports',
-		reportType: 'txt',
-		verbose: false,
-		reportLevels: {
+		outputDir: 'reports',
+		outputFormat: 'txt',
+		debug: false,
+		logLevels: {
 			notice: false,
 			warning: false,
 			error: true,
 		},
 	},
-	test: {
+	checkSite: {
 		options: {
 			urls: [
 				'https://<%= dev.proxy %>',
