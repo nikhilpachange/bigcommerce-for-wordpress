@@ -1,13 +1,13 @@
 // @flow
 /**
  * @module
- * @exports plugins
- * @description Kicks in any third party plugins that operate on
- * a sitewide basis.
+ * @exports initializePlugins
+ * @description Activates third-party plugins that run across
+ * the entire application.
  */
 
-const plugins = () => {
-	// initialize global external plugins here
+const initializePlugins = (): void => {
+  // setup global external plugins here
 };
 
-export default plugins;
+export default initializePlugins;
