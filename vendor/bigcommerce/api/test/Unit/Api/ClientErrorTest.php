@@ -2,12 +2,15 @@
 namespace Bigcommerce\Unit\Api;
 
 use Bigcommerce\Api\ClientError;
+use PHPUnit\Framework\TestCase;
 
-class ClientErrorTest extends \PHPUnit_Framework_TestCase
+class ClientErrorTest extends TestCase
 {
-    public function testStringifyingReturnsTheMessageAndCodeAppropriately()
+    public function testToString()
     {
-        $error = new ClientError('message here', 100);
-        $this->assertSame('Client Error (100): message here', (string)$error);
+        $this->assertSame(
+            'Client Error (100): message here',
+            (string) new ClientError('message here', 100)
+        );
     }
 }
